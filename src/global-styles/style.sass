@@ -1,0 +1,143 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+@import "styles/reset"
+@import "styles/variables"
+
+
+body
+  width: 100vw
+  min-height: 100vh
+  background-color: $Color-primary-dark
+  color: $Color-secondary-light
+  font-family: 'DM Sans', sans-serif
+  @media (min-width: $max-mobile-size)
+    position: relative
+
+
+.home-page
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-content: center
+  margin: 0 auto
+  @media (min-width: $max-mobile-size)
+    width: 70%
+    height: 700px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+  @media (min-width: $max-tablet-size)
+    min-width: 1100px
+    max-width: 1200px
+    display: grid
+    grid-template-columns: 1fr 1fr
+  @media (min-width: $large-desktop-size)
+    min-width: 1200px
+    max-width: 1300px
+
+
+.description
+  width: 90%
+  margin: 50px auto 20px auto
+  @media (min-width: $max-tablet-size)
+    margin: 0
+  &--h1
+    font-size: $fontSize-h2
+    line-height: $lineHeight-h2
+    font-weight: $medium-font
+    margin-bottom: 15px
+    letter-spacing: $letterSpacing-h2
+    text-align: justify
+    @media (min-width: $max-mobile-size)
+      font-size: $fontSize-h1
+      line-height: $lineHeight-h1
+      letter-spacing: $letterSpacing-h1
+
+  &--h2
+    max-height: 180px
+    font-size: $fontSize-bd2
+    line-height: $lineHeight-bd2
+    font-weight: $regular-font
+    text-align: justify
+    overflow: scroll
+    @media (min-width: $max-mobile-size)
+      font-size: $fontSize-bd1
+      line-height: $lineHeight-bd1
+      max-height: 300px
+
+.modules
+  display: flex
+  flex-direction: column
+  &:last-child
+    margin-bottom: 40px
+  @media (min-width: $max-mobile-size)
+    flex-direction: row
+    flex-wrap: wrap
+    &:last-child
+      margin-bottom: 0
+
+  &--element
+    width: 90%
+    height: 220px
+    margin: 10px auto
+    background-color: rgba($Color-secondary-light,0.1)
+    border-radius:  $rounding-M
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-decoration: none
+    &:hover
+      box-shadow: 0 0 12px 2px $Color-secondary-light
+    @media (min-width: $max-mobile-size)
+      width: 270px
+    @media (min-width: $xxl-desktop-size)
+      width: 300px
+      height: 300px
+      justify-content: center
+
+    &--icon
+      position: relative
+      margin: 15px 0
+      width: 50px
+      height: 50px
+      border-radius: 10px
+      @media (min-width: $max-mobile-size)
+        margin: 20px 0
+      @media (min-width: $xxl-desktop-size)
+        width: 70px
+        height: 70px
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+    &--title
+      color: $Color-secondary-light
+      font-size: $fontSize-h3
+      font-weight: $medium-font
+    &--text
+      width: 80%
+      max-height: 30%
+      margin-top: 15px
+      font-size: $fontSize-bd2
+      font-weight: $regular-font
+      color: rgba($Color-secondary-light,0.3)
+      padding: 0 10px
+      text-align: center
+      overflow: scroll
+      @media (min-width: $max-tablet-size)
+        font-size: $fontSize-bd1
+        line-height: $lineHeight-bd1
+
+
+
+    .colorPink
+      background-color: rgba($Color-primary-pink,0.2)
+    .colorBlue
+      background-color: rgba($Color-primary-blue,0.2)
+    .colorCyan
+      background-color: rgba($Color-primary-cyan,0.2)
+    .colorYellow
+      background-color: rgba($Color-primary-yellow,0.2)
